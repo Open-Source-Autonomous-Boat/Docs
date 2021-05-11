@@ -2,6 +2,7 @@ remote_theme: pmarsceill/just-the-docs
 title: OSAB Documentation
 description: Documentation for the Open Source Autonomous Boat project
 url: "https://docs.osab.xyz/"
+logo: "/assets/images/logo final clear bg.png"
 
 # Aux links for the upper right navigation
 aux_links:
