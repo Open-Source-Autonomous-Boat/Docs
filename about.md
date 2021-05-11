@@ -15,18 +15,4 @@ OSAB was created as a way to have fun while learning and achieving a greater goa
 Our goal is to collect data on the earths oceans and atmosphere. We will use this data to pro-activly fight climate change before it further affects our lifes.
 
 ## Our Team
-
-### Michael MacDonald - Founder, responsible for guiding team members and plays an active role in all aspects of the project.
-Hi! I am a high school student from Oregon who loves to tinker and code. I am a Clean My Planet global board member and I love to use my STEM skills to find intuitive new ways to help the environment.
-
-### Sirius - Web Dev, Web Master, Electrical Engineer, Public Relations.
-Hey, I am a high school student from Croatia, my name is Ivan but most know me as Sirius, I like space, electronics, and nature. When I saw this project and what are they aiming to do I was just blown away, and wanted to become a part of the team (which I am now). My role in this project is marketing and some front-end web development. I hope we can make this idea happen and fight climate change and at least try to save our fragile planet!
-
-### Feynman - CAD Designer.
-
-### Doğu Taş - Software/Firmware Dev, Public Relations.
-Hi! I am a 21 year old physics student living in turkey. I will be working on firmware and software on this project.
-twitter.com/dogu_tas
-Instagram: tas_dogu
-
-### Upmanyu - Documentation Manager.
+Your can find more about our team [here](https://docs.osab.xyz/team), on our [website](https://osab.xyz/), or you can find our team and contributors [here](https://github.com/Open-Source-Autonomous-Boat/OSAB/blob/main/CONTRIBUTORS.md)
