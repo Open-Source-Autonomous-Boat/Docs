@@ -1,3 +1,8 @@
+# For help with this file go here:
+# https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#configuring-jekyll-in-your-github-pages-site
+# For more setting you can change in this file for this theme go here:
+# https://github.com/pmarsceill/just-the-docs/blob/master/docs/configuration.md
+
 remote_theme: pmarsceill/just-the-docs
 title: OSAB Docs
 description: Documentation for the Open Source Autonomous Boat project
@@ -46,3 +51,8 @@ color_scheme: "dark"
 # e.g, UA-1234567-89
 # ga_tracking: UA-2709176-10
 # ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
+
+
+plugins:
+  - jekyll-gist # Liquid tag for displaying GitHub Gists in Jekyll sites: {% gist %}. Ex. {% gist c08ee0f2726fd0e3909d %} OR {% gist c08ee0f2726fd0e3909d test.md %} to add a file name
+  - "jekyll-github-metadata"
