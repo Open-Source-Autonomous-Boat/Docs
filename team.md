@@ -22,3 +22,6 @@ Hi! I am a 21 year old physics student living in turkey. I will be working on fi
 Instagram: tas_dogu
 
 ### Upmanyu - Documentation Manager.
+
+## Contrubutors
+You can find contributors [here](https://github.com/Open-Source-Autonomous-Boat/OSAB/blob/main/CONTRIBUTORS.md).
