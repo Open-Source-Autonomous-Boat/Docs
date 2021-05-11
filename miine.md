@@ -1,6 +1,6 @@
 ---
 title: Miine
-parent: Vessels | OSAB Docs
+parent: Vessels
 has_children: true
 nav_order: 1
 ---
