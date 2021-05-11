@@ -1,19 +1,17 @@
 # OSAB Docs
 
-Add this to the top of every page
-The has_children, parent, and grand_parent thing is basicly how you make folders/dropdowns/sections in the sidebar
+Add this to the top of every page and make sure to edit it for each page!
 ```
 ---
-title: Granchild of Test
-has_children: true
-parent: Child of Test
-grand_parent: Test
-nav_order: 1
-permalink: /bar/
+title: [Title]                            # This is the page title
+has_children: [true | false]              # This makes it its own dropdown section in the navbar
+parent: [Title of parent]                 # Set this as the section it is in if you want the page to be under a section
+grand_parent: [Title of grand parent]     # Set this as the section its section is in if its section is in a section (ex: Vessels->Miine->Firmware you would set Vessels as the grand parent for Firmware)
+nav_order: [Number]                       # This is the page's possition in the nav bar or navbar section
+permalink: [Path]                         # This is the link of the page (ex: /vessels/miine/ would be https://docs.osab.xyz/vessels/miine/)
 ---
 ```
-Be sure to remove the unneed parts and edit it
-For example, if i have a page named Miine that should be under the Vessels section and is its own section I would do this:
+For example, if I have a page named Miine that should be under the Vessels section and is its own section I would do this:
 ```
 ---
 title: Miine 
