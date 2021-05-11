@@ -1,7 +1,9 @@
 ---
-title: Firmware
-parent: Miine Code
-grand_parent: Miine
+title: Miine Firmware
+identifier: Miine Firmware
+menus: Miine Code
+<!-- parent: Miine Code
+grand_parent: Miine -->
 has_children: true
 nav_order: 1
 permalink: /vessels/miine/code/firmware/
