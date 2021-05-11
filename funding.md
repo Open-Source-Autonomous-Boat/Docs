@@ -2,6 +2,7 @@
 title: Funding
 has_children: false
 nav_order: 3
+permalink: /funding/
 ---
 
 # Funding
