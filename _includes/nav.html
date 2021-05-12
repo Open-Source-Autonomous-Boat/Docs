@@ -63,9 +63,9 @@
       {%- unless node.nav_exclude -%}
   
         {%- assign active = 0 -%}
-        {%- for check_parent in page.parents -%}
-          {{ check_parent.title }}
-          {%- if node.title == check_parent.title -%}
+        {%- for item in page.parents -%}
+          {{ item.title }}
+          {%- if node.title == item.title -%}
             {%- assign active = 1 -%}
           {%- endif -%}
         {%- endfor -%}
