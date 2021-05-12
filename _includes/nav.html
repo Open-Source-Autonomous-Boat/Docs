@@ -114,27 +114,7 @@
           </ul>
         {%- endif -%} --> <!-- If node.has_children -->
         
-        {%- if node.has_children -%}
-          {%- assign children_list = pages_list | where: "parent", node.title -%}
-          <ul class="nav-list ">
-          {%- for child in children_list -%}
-            {%- unless child.nav_exclude -%}
-
-            {%- assign active = false -%}
-            {%- for check_parent in page.parents -%}
-              {{ check_parent.title }}
-              {%- if child.title == check_parent.title -%}
-                {%- assign active = true -%}
-              {%- endif -%}
-            {%- endfor -%}
-
-            <li class="nav-list-item {% if page.url == child.url or active == true or page.parent == child.title %} active{% endif %}">
-              {{ include nav_recursive_children.html }}
-            </li>
-            {%- endunless -%}
-          {%- endfor -%}
-          </ul>
-        {%- endif -%}
+        {{ include nav_recursive_children.html }}
         
       </li>
       {%- endunless -%}
