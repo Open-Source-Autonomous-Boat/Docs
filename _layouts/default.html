@@ -133,9 +133,9 @@ layout: table_wrappers
       
           <nav aria-label="Breadcrumb" class="breadcrumb-nav">
             <ol class="breadcrumb-nav-list">
-              {%- for s in (0..9) -%}
-                {{ " i:" }}
-                {{ i }}
+              {%- assign s = 0 -%}
+              {%- for item in page.parents -%}
+                {%- increment s -%}
                 {{ " s:" }}
                 {{ s }}
                 {{ " urls[s]:" }}
@@ -144,7 +144,7 @@ layout: table_wrappers
                 {{ parent_pages[s] }}
                 {{ " parent_pages[1]" }}
                 {{ parent_pages[1] }}
-                <li class="breadcrumb-nav-list-item"><a href="{{ urls[s] }}">{{ parent_pages[s] }}</a></li>
+                <li class="breadcrumb-nav-list-item"><a href="{{ urls[s] }}">{{ item }}</a></li>
               {%- endfor -%}
               <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
             </ol>
