@@ -56,6 +56,29 @@
 
   {%- assign pages_list = sorted_number_ordered_pages | concat: sorted_string_ordered_pages -%}
   
+  
+  
+{% assign url_parts = page.url | split: '/' %}
+{% assign url_parts_size = url_parts | size %}
+{% assign rm = url_parts | last %}
+{% assign base_url = page.url | replace: rm %}
+
+<ul>
+{% for node in site.pages %}
+  {% if node.url contains base_url %}
+    {% assign node_url_parts = node.url | split: '/' %}
+    {% assign node_url_parts_size = node_url_parts | size %}
+    {% assign filename = node_url_parts | last %}
+    {% if url_parts_size == node_url_parts_size and filename != 'index.html' %}
+      <li><a href='{{node.url}}'>{{node.title}}</a></li>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+  
+  
+  
+  
   {%- for node in pages_list -%}
     {%- if node.parent == nil -%}
       {%- unless node.nav_exclude -%}
@@ -70,13 +93,13 @@
           {%- endif -%}
         {%- endfor -%}
   
-      <li class="nav-list-item{% if page.url == node.url or active == true or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
+      <li class="nav-list-item{% if page.url == node.url or active == true %} active{% endif %}">
         {%- if node.has_children -%}
           <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
         {%- endif -%}
         <a href="{{ node.url | absolute_url }}" class="nav-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
         
-        {%- include nav_recursive_children.html ichild=node ipage=page ipages_list=pages_list -%}
+<!--         {%- include nav_recursive_children.html ichild=node ipage=page ipages_list=pages_list -%} -->
         
       </li>
       {%- endunless -%}
