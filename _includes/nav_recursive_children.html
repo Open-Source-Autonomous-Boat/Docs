@@ -20,7 +20,7 @@
       {%- if child2.has_children -%}
         <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
       {%- endif -%}
-      <a href="{{ node.url | absolute_url }}" class="nav-list-link{% if page.url == child2.url %} active{% endif %}">{{ child2.title }}</a>
+      <a href="{{ child2.url | absolute_url }}" class="nav-list-link{% if page.url == child2.url %} active{% endif %}">{{ child2.title }}</a>
       {%- include nav_recursive_children.html -%}
     </li>
     {%- endunless -%}
