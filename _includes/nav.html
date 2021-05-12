@@ -56,20 +56,23 @@
 
   {%- assign pages_list = sorted_number_ordered_pages | concat: sorted_string_ordered_pages -%}
   
-  {%- for print_page in pages_list -%}
+<!--   {%- for print_page in pages_list -%}
     {{ print_page }}
-  {%- endfor -%}
+  {%- endfor -%} -->
   
   {%- for node in pages_list -%}
     {%- if node.parent == nil -%}
       {%- unless node.nav_exclude -%}
+  
         {%- assign active = false -%}
         {%- for check_parent in page.parents -%}
+          {{ check_parent }}
           {%- if node.title == check_parent -%}
             {%- assign active = true -%}
           {%- endif -%}
         {%- endfor -%}
-      <li class="nav-list-item{% if page.url == node.url or active == true or page.parent == node.url or page.grand_parent == node.url %} active{% endif %}">
+  
+      <li class="nav-list-item{% if page.url == node.url or active == true or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
         {%- if node.has_children -%}
           <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
         {%- endif -%}
@@ -79,7 +82,15 @@
           <ul class="nav-list ">
           {%- for child in children_list -%}
             {%- unless child.nav_exclude -%}
-            <li class="nav-list-item {% if page.url == child.url or page.parent == child.title %} active{% endif %}">
+            
+            {%- assign active = false -%}
+            {%- for check_parent in page.parents -%}
+              {%- if child.title == check_parent -%}
+                {%- assign active = true -%}
+              {%- endif -%}
+            {%- endfor -%}
+            
+            <li class="nav-list-item {% if page.url == child.url or active == true or page.parent == child.title %} active{% endif %}">
               {%- if child.has_children -%}
                 <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
               {%- endif -%}
