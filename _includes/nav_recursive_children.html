@@ -6,7 +6,8 @@
 
     {%- assign active = false -%}
     {%- for check_parent in page.parents -%}
-      {%- if node.title == check_parent -%}
+      {{ check_parent.title }}
+      {%- if node.title == check_parent.title -%}
         {%- assign active = true -%}
       {%- endif -%}
     {%- endfor -%}
