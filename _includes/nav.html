@@ -56,10 +56,6 @@
 
   {%- assign pages_list = sorted_number_ordered_pages | concat: sorted_string_ordered_pages -%}
   
-<!--   {%- for print_page in pages_list -%}
-    {{ print_page }}
-  {%- endfor -%} -->
-  
   {%- for node in pages_list -%}
     {%- if node.parent == nil -%}
       {%- unless node.nav_exclude -%}
@@ -80,7 +76,7 @@
         {%- endif -%}
         <a href="{{ node.url | absolute_url }}" class="nav-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
         
-        {%- include nav_recursive_children.html child=node -%}
+        {%- include nav_recursive_children.html child=node page=page -%}
         
       </li>
       {%- endunless -%}
