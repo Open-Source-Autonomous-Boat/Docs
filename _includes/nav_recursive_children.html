@@ -5,7 +5,6 @@
 
   {%- assign active = 0 -%}
   {%- for item in include.page.parents -%}
-    {{ item }}
     {%- if child.title == item -%}
       {%- assign active = 1 -%}
     {%- endif -%}
