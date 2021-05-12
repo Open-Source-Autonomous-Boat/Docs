@@ -64,8 +64,6 @@ layout: table_wrappers
       {% else %}
         {% include nav.html pages=site.html_pages %}
       {% endif %}
-<!--       {% assign menu = site.menus.header %}
-      {% include menus.html %} -->
     </nav>
     <footer class="site-footer">
       This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
@@ -102,9 +100,22 @@ layout: table_wrappers
       {% endif %}
     </div>
     <div id="main-content-wrap" class="main-content-wrap">
+      
       {% unless page.url == "/" %}
         {% if page.parent %}
-          {%- for node in pages_list -%}
+      
+          {%- assign i = 0 -%}
+          {%- for item in page.parents -%}
+            {%- increment i -%}
+            {%- for node in pages_list -%}
+              {%- if item == node.title -%}
+                {%- assign urls[i] = node.url | absolute_url -%}
+                {%- assign parent_pages[i] = item -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endfor -%}
+      
+<!--           {%- for node in pages_list -%}
             {%- if node.parent == nil -%}
               {%- if page.parent == node.title or page.grand_parent == node.title -%}
                 {%- assign first_level_url = node.url | absolute_url -%}
@@ -118,20 +129,21 @@ layout: table_wrappers
                 {%- endfor -%}
               {%- endif -%}
             {%- endif -%}
-          {%- endfor -%}
+          {%- endfor -%} -->
+      
           <nav aria-label="Breadcrumb" class="breadcrumb-nav">
             <ol class="breadcrumb-nav-list">
-              {% if page.grand_parent %}
-                <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.grand_parent }}</a></li>
-                <li class="breadcrumb-nav-list-item"><a href="{{ second_level_url }}">{{ page.parent }}</a></li>
-              {% else %}
-                <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.parent }}</a></li>
-              {% endif %}
+              {%- for s in (0..i) -%}
+                <li class="breadcrumb-nav-list-item"><a href="{{ urls[s] }}">{{ parent_pages[s] }}</a></li>
+              {%- endfor -%}
               <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
             </ol>
           </nav>
+      
         {% endif %}
       {% endunless %}
+      
+      
       <div id="main-content" class="main-content" role="main">
         {% if site.heading_anchors != false %}
           {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
