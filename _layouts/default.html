@@ -105,7 +105,7 @@ layout: table_wrappers
         {% if page.parent %}
           {%- assign i = 0 -%}
           {%- for item in page.parents -%}
-            {%- i | plus: 1 -%}
+            {%- assign i = i | plus: 1 -%}
             {%- for node in pages_list -%}
               {%- if item == node.title -%}
                 {%- assign urls[i] = node.url | absolute_url -%}
@@ -133,7 +133,7 @@ layout: table_wrappers
             <ol class="breadcrumb-nav-list">
               {%- assign s = 0 -%}
               {%- for item in page.parents -%}
-                {%- s | plus: 1 -%}
+                {%- assign s = s | plus: 1 -%}
                 {{ " urls[s]:" }}
                 {{ urls[s] }}
                 <li class="breadcrumb-nav-list-item"><a href="{{ urls[s] }}">{{ item }}</a></li>
