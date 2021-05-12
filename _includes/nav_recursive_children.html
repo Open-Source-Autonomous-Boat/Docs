@@ -8,9 +8,11 @@
 
     {%- assign active = false -%}
     {%- for check_parent in page.parents -%}
-      {{ check_parent.title }}
+<!--       {{ check_parent.title }} -->
       {%- if child.title == check_parent.title -%}
         {%- assign active = true -%}
+        {{ child.title }}
+        {{ active }}
       {%- endif -%}
     {%- endfor -%}
 
