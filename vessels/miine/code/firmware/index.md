@@ -1,7 +1,9 @@
 ---
 title: Miine Firmware
-identifier: Miine Firmware
-menus: Miine Code
+parents:
+  - Code
+  - Miine
+  - Vessels
 <!-- parent: Miine Code
 grand_parent: Miine -->
 has_children: true
