@@ -57,3 +57,19 @@ plugins:
   - jekyll-gist # Liquid tag for displaying GitHub Gists in Jekyll sites: {% gist %}. Ex. {% gist c08ee0f2726fd0e3909d %} OR {% gist c08ee0f2726fd0e3909d test.md %} to add a file name
   - "jekyll-github-metadata"
   - jekyll-menus
+  
+# collections:
+#   docs:
+#     permalink: "/:collection/:path/"
+#     output: true
+#   tutorials:
+#     permalink: "/:collection/:path/"
+#     output: true
+
+# just_the_docs:
+#   collections:
+#     docs:
+#       name: Documentation
+#     tutorials:
+#       name: Tutorials
+
