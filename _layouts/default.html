@@ -108,10 +108,12 @@ layout: table_wrappers
             {%- assign i = i | plus: 1 -%}
             {%- for node in pages_list -%}
               {%- if item == node.title -%}
-                {%- assign urls[i] = node.url | absolute_url -%}
+                {%- assign urls | append: node.url | append: "~" | absolute_url -%}
               {%- endif -%}
             {%- endfor -%}
           {%- endfor -%}
+          {% assign urls = urls | split: "~" %}
+          
       
 <!--           {%- for node in pages_list -%}
             {%- if node.parent == nil -%}
