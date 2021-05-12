@@ -77,8 +77,9 @@
           <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
         {%- endif -%}
         <a href="{{ node.url | absolute_url }}" class="nav-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
-        
-        {%- include nav_recursive_children.html child=node page=page pages_list=pages_list -%}
+        {%- if node.has_children -%}
+          {%- include nav_recursive_children.html node=node page=page pages_list=pages_list -%}
+        {%- endif -%}
         
       </li>
       {%- endunless -%}
