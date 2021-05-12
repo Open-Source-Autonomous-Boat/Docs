@@ -48,7 +48,7 @@ layout: table_wrappers
       </a>
     </div>
     <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
-      {% if site.just_the_docs.collections %}
+      <!--{% if site.just_the_docs.collections %}
         {% assign collections_size = site.just_the_docs.collections | size %}
         {% for collection_entry in site.just_the_docs.collections %}
           {% assign collection_key = collection_entry[0] %}
@@ -63,7 +63,9 @@ layout: table_wrappers
         {% endfor %}
       {% else %}
         {% include nav.html pages=site.html_pages %}
-      {% endif %}
+      {% endif %}-->
+      {% assign menu = site.menus.header %}
+      {% include menus.html %}
     </nav>
     <footer class="site-footer">
       This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
