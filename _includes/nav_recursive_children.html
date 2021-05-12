@@ -3,28 +3,28 @@
  {%- assign child = include.child -%}
  {%- assign page = include.page -%}
  {%- assign pages_list = include.pages_list -%}
- {%- if child.has_children -%}
-  {%- assign children_list = pages_list | where: "parent", child.title -%}
+ {%- if include.child.has_children -%}
+  {%- assign children_list = include.pages_list | where: "parent", include.child.title -%}
   <ul class="nav-list ">
   {%- for child2 in children_list -%}
     {%- unless child2.nav_exclude -%}
 
     {%- assign active = false -%}
-    {%- for check_parent in page.parents -%}
+    {%- for check_parent in include.page.parents -%}
       {{ check_parent.title }}
       {%- if child2.title == check_parent.title -%}
         {%- assign active = true -%}
-        {{ child.title }}
+        {{ child2.title }}
         {{ active }}
       {%- endif -%}
     {%- endfor -%}
 
-    <li class="nav-list-item {% if page.url == child2.url or active == true or page.parent == child2.title %} active{% endif %}">
+    <li class="nav-list-item {% if include.page.url == child2.url or active == true or include.page.parent == child2.title %} active{% endif %}">
       {%- if child2.has_children -%}
         <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
       {%- endif -%}
-      <a href="{{ child2.url | absolute_url }}" class="nav-list-link{% if page.url == child2.url %} active{% endif %}">{{ child2.title }}</a>
-      {%- include nav_recursive_children.html -%}
+      <a href="{{ child2.url | absolute_url }}" class="nav-list-link{% if include.page.url == child2.url %} active{% endif %}">{{ child2.title }}</a>
+      {%- include nav_recursive_children.html nav_recursive_children.html child=child2 page=include.page pages_list=include.pages_list -%}
     </li>
     {%- endunless -%}
   {%- endfor -%}
