@@ -1,3 +1,5 @@
+{%- assign sorted_number_ordered_pages = number_ordered_pages | sort:"nav_order" -%}
+
 {% if menu %}
 <ul>
 {% for item in menu %}
