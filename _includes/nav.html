@@ -76,7 +76,7 @@
         {%- endif -%}
         <a href="{{ node.url | absolute_url }}" class="nav-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
         
-        {%- include nav_recursive_children.html child=node page=page -%}
+        {%- include nav_recursive_children.html ichild=node ipage=page -%}
         
       </li>
       {%- endunless -%}
