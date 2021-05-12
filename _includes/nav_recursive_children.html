@@ -1,18 +1,18 @@
 {%- if node.has_children -%}
   {%- assign children_list = pages_list | where: "parent", node.title -%}
   <ul class="nav-list ">
-  {%- for node in children_list -%}
-    {%- unless node.nav_exclude -%}
+  {%- for child in children_list -%}
+    {%- unless child.nav_exclude -%}
 
     {%- assign active = false -%}
     {%- for check_parent in page.parents -%}
       {{ check_parent.title }}
-      {%- if node.title == check_parent.title -%}
+      {%- if child.title == check_parent.title -%}
         {%- assign active = true -%}
       {%- endif -%}
     {%- endfor -%}
 
-    <li class="nav-list-item {% if page.url == node.url or active == true or page.parent == node.title %} active{% endif %}">
+    <li class="nav-list-item {% if page.url == child.url or active == true or page.parent == child.title %} active{% endif %}">
       {{ include nav_recursive_children.html }}
     </li>
     {%- endunless -%}
