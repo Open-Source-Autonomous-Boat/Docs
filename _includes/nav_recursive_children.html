@@ -5,6 +5,7 @@
 
   {%- assign active = 0 -%}
   {%- for check_parent in include.page.parents -%}
+    {{ "test" }}
     {{ check_parent }}
     {%- if child.title == check_parent.title -%}
       {%- assign active = 1 -%}
