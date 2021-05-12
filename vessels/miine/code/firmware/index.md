@@ -1,7 +1,7 @@
 ---
 title: Miine Firmware
 parents:
-  - Code
+  - Miine Code
   - Miine
   - Vessels
 parent: Miine Code
