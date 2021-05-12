@@ -66,22 +66,8 @@ layout: table_wrappers
       {% endif %}
     </nav> -->
     <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
-      <ul>
-        {% for item in site.menus.header %}
-          <li class="menu-item-{{ loop.index }}">
-            <a href="{{ item.url }}" title="Go to {{ item.title }}">{{ item.title }}</a>
-            {% if item.children %}
-              <ul class="sub-menu">
-              {% for item in item.children %}
-                <li class="menu-item-{{ loop.index }}">
-                  <a href="{{ item.url }}" title="Go to {{ item.title }}">{{ item.title }}</a>
-                </li>
-              {% endfor %}
-              </ul>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
+      {% assign menu = site.menus.header %}
+      {% include menus.html %}
     </nav>
     <footer class="site-footer">
       This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
