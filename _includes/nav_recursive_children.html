@@ -5,17 +5,15 @@
 {%- for child in children_list -%}
   {%- unless child.nav_exclude -%}
 
-  {%- assign active = false -%}
+  {%- assign active = 0 -%}
   {%- for check_parent in include.page.parents -%}
     {{ check_parent.title }}
     {%- if child.title == check_parent.title -%}
-      {%- assign active = true -%}
-      {{ child.title }}
-      {{ active }}
+      {%- assign active = 1 -%}
     {%- endif -%}
   {%- endfor -%}
 
-  <li class="nav-list-item {% if include.page.url == child.url or active == true or include.page.parent == child.title %} active{% endif %}">
+  <li class="nav-list-item {% if include.page.url == child.url or active == 1 or include.page.parent == child.title %} active{% endif %}">
     {%- if child.has_children -%}
       <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
     {%- endif -%}
