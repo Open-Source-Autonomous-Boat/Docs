@@ -1,8 +1,6 @@
 <!-- {%- assign node = child -%}
  -->
- {%- assign child = include.child -%}
- {%- assign page = include.page -%}
- {%- assign pages_list = include.pages_list -%}
+
  {%- if include.child.has_children -%}
   {%- assign children_list = include.pages_list | where: "parent", include.child.title -%}
   <ul class="nav-list ">
