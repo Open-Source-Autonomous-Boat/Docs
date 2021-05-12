@@ -5,7 +5,7 @@
     <a href="{{ item.url }}" title="Go to {{ item.title }}">{{ item.title }}</a>
     {% if item.children %}
       {% assign menu = item.children %}
-      {% include menu.html %}
+      {% include menus.html %}
     {% endif %}
   </li>
 {% endfor %}
