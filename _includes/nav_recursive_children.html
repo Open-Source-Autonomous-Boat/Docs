@@ -1,5 +1,5 @@
-{%- if node.has_children -%}
-  {%- assign children_list = pages_list | where: "parent", node.title -%}
+{%- if child.has_children -%}
+  {%- assign children_list = pages_list | where: "parent", child.title -%}
   <ul class="nav-list ">
   {%- for child in children_list -%}
     {%- unless child.nav_exclude -%}
