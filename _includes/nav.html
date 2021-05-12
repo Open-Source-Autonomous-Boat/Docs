@@ -62,13 +62,13 @@
   {%- for node in pages_list -%}
     {%- if node.parent == nil -%}
       {%- unless node.nav_exclude -%}
-      {%- assign active = false -%}
+        {%- assign active = false -%}
         {%- for check_parent in parents -%}
           {%- if node.title == check_parent -%}
             {%- assign active = true -%}
           {%- endif -%}
         {%- endfor -%}
-      <li class="nav-list-item{% if page.url == node.url or active == false or page.parent == node.url or page.grand_parent == node.url %} active{% endif %}">
+      <li class="nav-list-item{% if page.url == node.url or active == true or page.parent == node.url or page.grand_parent == node.url %} active{% endif %}">
         {%- if node.has_children -%}
           <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
         {%- endif -%}
