@@ -62,17 +62,15 @@
     {%- if node.parent == nil -%}
       {%- unless node.nav_exclude -%}
   
-        {%- assign active = false -%}
+        {%- assign active = 0 -%}
         {%- for check_parent in page.parents -%}
           {{ check_parent.title }}
           {%- if node.title == check_parent.title -%}
-            {%- assign active = true -%}
-            {{ node.title }}
-            {{ active }}
+            {%- assign active = 1 -%}
           {%- endif -%}
         {%- endfor -%}
   
-      <li class="nav-list-item{% if page.url == node.url or active == true %} active{% endif %}">
+      <li class="nav-list-item{% if page.url == node.url or active == 1 %} active{% endif %}">
         {%- if node.has_children -%}
           <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
         {%- endif -%}
