@@ -1,7 +1,4 @@
 <ul class="nav-list">
-  {%- for print_page in include.pages -%}
-    {{ print_page }}
-  {%- endfor -%}
   {%- assign titled_pages = include.pages
         | where_exp:"item", "item.title != nil" -%}
   {%- comment -%}
@@ -59,7 +56,9 @@
 
   {%- assign pages_list = sorted_number_ordered_pages | concat: sorted_string_ordered_pages -%}
   
-  
+  {%- for print_page in pages_list -%}
+    {{ print_page }}
+  {%- endfor -%}
   
   {%- for node in pages_list -%}
     {%- if node.parent == nil -%}
