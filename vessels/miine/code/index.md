@@ -1,7 +1,8 @@
 ---
 title: Miine Code
-identifier: Miine Code
-menus: Miine
+parents:
+  - Miine
+  - Vessels
 <!--parent: Miine
 grand_parent: Vessels-->
 has_children: true
