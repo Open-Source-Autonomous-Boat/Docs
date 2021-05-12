@@ -10,7 +10,7 @@
     {%- endif -%}
   {%- endfor -%}
 
-  <li class="nav-list-item {% if include.page.url == child.url or active == 1 or include.page.parent == child.title %} active{% endif %}">
+  <li class="nav-list-item {% if include.page.url == child.url or active == 1 or include.page.parent == child.title or include.page.grand_parent == child.title %} active{% endif %}">
     {%- if child.has_children -%}
       <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
     {%- endif -%}
