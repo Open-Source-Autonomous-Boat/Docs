@@ -139,8 +139,8 @@ layout: table_wrappers
               {%- assign s = 0 -%}
               {%- assign page_parents = page.parents | reverse -%}
               {%- for item in page_parents -%}
-                {%- assign s = s | plus: 1 -%}
                 <li class="breadcrumb-nav-list-item"><a href="{{ urls[s] }}">{{ item }}</a></li>
+                {%- assign s = s | plus: 1 -%}
               {%- endfor -%}
               <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
             </ol>
