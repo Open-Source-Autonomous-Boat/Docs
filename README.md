@@ -19,6 +19,7 @@ For example:
 If I have a page with children called cameras and this is its location in the tree:
 /Boston Dynamics/Robots/Spot/Hardware/Cameras
 This is what the file would look like:
+```
 ---
 title: Cameras
 parents:
@@ -31,3 +32,4 @@ has_children: true
 nav_order: 1
 permalink: /boston-dynamics/robots/spot/hardware/cameras
 ---
+```
