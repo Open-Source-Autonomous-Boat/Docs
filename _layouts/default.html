@@ -114,7 +114,7 @@ layout: table_wrappers
           {%- endfor -%}
           {{ "urls1" }}
           {{ urls }}
-          {%- assign urls = urls | split: "*" -%}
+          {%- assign urls = urls | split: "*" | reverse -%}
           {{ "urls2" }}
           {{ urls }}
       
