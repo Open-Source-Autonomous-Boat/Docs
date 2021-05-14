@@ -112,11 +112,7 @@ layout: table_wrappers
               {%- endif -%}
             {%- endfor -%}
           {%- endfor -%}
-          {{ "urls1" }}
-          {{ urls }}
           {%- assign urls = urls | split: "*" | reverse -%}
-          {{ "urls2" }}
-          {{ urls }}
       
 <!--           {%- for node in pages_list -%}
             {%- if node.parent == nil -%}
