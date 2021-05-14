@@ -6,7 +6,7 @@ Add this to the top of every page and make sure to edit it for each page!
 title: [Title]                    # This is the page title
 has_children: [true | false]      # This makes it its own dropdown section in the navbar
 parent: [Title of parent]         # Set this as the section it is in if you want the page to be under a section
-parents:                          # Set this as the section its section is in if its section is in a section (ex: Vessels->Miine->Firmware you would set Vessels as the grand parent for Firmware)
+parents:                          # Set this as the section its section is in if its section is in a section (ex: Vessels->Miine->Firmware you would set Vessels as the grand parent for Firmware) [The order is important. Start with the parent at the top and go down in order]
   - [Title of parent]
   - [Title of grand parent]
   - [Title of great grand parent]
