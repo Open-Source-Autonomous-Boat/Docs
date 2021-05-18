@@ -1,6 +1,9 @@
 ---
 title: Our Team
 parent: Home
+parents:
+  - Home
+has_children: false
 nav_order: 3
 permalink: /team/
 ---
