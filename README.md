@@ -55,6 +55,6 @@ title: Cameras
 parent: Hardware
 ancestor: Boston Dynamics
 nav_order: 1
-permalink: /boston-dynamics/robots/spot/hardware/cameras
+permalink: /boston-dynamics/robots/spot/hardware/cameras/
 ---
 ```
