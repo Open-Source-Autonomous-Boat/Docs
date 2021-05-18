@@ -1,7 +1,7 @@
 ---
-title: Firmware
-nav_order: 4
-permalink: /firmware
+title: Software
+nav_order: 3
+permalink: /Software
 ---
 
-# Firmware
+# Software
