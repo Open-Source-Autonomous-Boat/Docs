@@ -1,9 +1,6 @@
 ---
 title: About
 parent: Home
-parents:
-  - Home
-has_children: false
 nav_order: 1
 permalink: /about/
 ---
