@@ -43,6 +43,11 @@ ancestor: [Title of ancestor]     # If the page is a child of a page that has th
 nav_order: [Number]               # This is the page's vertical position in the nav tree
 ```
 
+#### Some rules
+- Top-level pages cannot have the same title
+- Children of the same parent cannot have the same title
+- A child cannot have the same title as its parent or any of its ancestors
+
 ### An example:
 If I have a page called `Cameras` and this is its location in the tree:
 /Boston Dynamics/Robots/Spot/Hardware/Cameras
