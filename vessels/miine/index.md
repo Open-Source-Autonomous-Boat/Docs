@@ -1,6 +1,9 @@
 ---
 title: Miine
+parents:
+  - Vessels
 parent: Vessels
+has_children: true
 nav_order: 1
 permalink: /vessels/miine/
 ---
