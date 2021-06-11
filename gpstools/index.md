@@ -6,7 +6,7 @@ permalink: /gpstools/
 
 # GPSTools
 
-GPSTools is an arduino library that provides easy GPS calculations.
+GPSTools is an arduino library that provides easy GPS calculations. [Github Repo](https://github.com/Open-Source-Autonomous-Boat/GPSTools)
 
 ## Functions:
 
