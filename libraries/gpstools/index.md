@@ -1,7 +1,8 @@
 ---
 title: GPSTools
-nav_order: 5
-permalink: /gpstools/
+parent: Libraries
+nav_order: 1
+permalink: /libraries/gpstools/
 ---
 
 # GPSTools
