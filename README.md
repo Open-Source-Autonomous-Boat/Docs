@@ -1,4 +1,5 @@
 [![Open Source](https://badgen.net/badge/icon/Open%20Source?icon=git&label)](https://github.com/Open-Source-Autonomous-Boat/Docs)
+[![Website docs.osab.xyz](https://img.shields.io/website-up-down-green-red/https/docs.osab.xyz.svg)](http://docs.osab.xyz/)
 
 # OSAB Docs
 
