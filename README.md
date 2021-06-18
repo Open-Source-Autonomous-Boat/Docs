@@ -1,6 +1,3 @@
-[![Open Source](https://badgen.net/badge/icon/Open%20Source?icon=git&label)](https://github.com/Open-Source-Autonomous-Boat/Docs)
-[![Website docs.osab.xyz](https://img.shields.io/website-up-down-green-red/https/docs.osab.xyz.svg)](http://docs.osab.xyz/)
-
 # OSAB Docs
 
 OSAB's documentation is a GitHub pages site. It runs Jekyll and uses the [pdmosses/just-the-docs@rec-nav-2](https://github.com/pdmosses/just-the-docs/tree/combination-rec-nav) theme which is a fork of [Just-The-Docs](https://pmarsceill.github.io/just-the-docs/). You can find the pull request [here](https://github.com/pmarsceill/just-the-docs/pull/462) if you want this fork to be added to the base Just-The-Docs repo
