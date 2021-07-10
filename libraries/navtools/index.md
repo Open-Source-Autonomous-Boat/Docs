@@ -1,13 +1,13 @@
 ---
-title: GPSTools
+title: NavTools
 parent: Libraries
 nav_order: 1
-permalink: /libraries/gpstools/
+permalink: /libraries/navtools/
 ---
 
-# GPSTools
+# NavTools
 
-GPSTools is an arduino library that provides easy GPS calculations. [Github Repo](https://github.com/Open-Source-Autonomous-Boat/GPSTools)
+NavTools is an arduino library that provides easy GPS and heading calculations. [Github Repo](https://github.com/Open-Source-Autonomous-Boat/NavTools)
 
 ## Functions:
 
