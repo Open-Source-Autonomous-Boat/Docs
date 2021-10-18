@@ -1,6 +1,7 @@
 ---
 title: Variables
-nav_order: 1
+parent: 1.0.0-alpha.1
+nav_order: 3
 permalink: /firmware/vessel-firmware/versions/1.0.0-alpha.1/variables/
 ---
 
