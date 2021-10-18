@@ -4,7 +4,7 @@ nav_order: 3
 permalink: /firmware/
 ---
 
+# Firmware
 
-**Program Hardware Constants:**
-*These are settings that should not be changed after launch*
-- Rudder Trim / Rudder Offset
+Our vessels all use our custom firmware.
+
