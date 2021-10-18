@@ -3,7 +3,7 @@
 # For more setting you can change in this file for this theme go here:
 # https://github.com/pmarsceill/just-the-docs/blob/master/docs/configuration.md
 
-remote_theme: pdmosses/just-the-docs@master
+remote_theme: pdmosses/just-the-docs@combination-rec-nav
 title: OSAB Docs
 description: Documentation for the Open Source Autonomous Boat project
 url: "https://docs.osab.xyz"
