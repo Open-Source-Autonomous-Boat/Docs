@@ -6,5 +6,4 @@ permalink: /libraries
 
 # Libraries
 
-- Waypoint calculations library
-- 
+- [NavTools](/libraries/navtools/)
