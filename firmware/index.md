@@ -1,7 +1,7 @@
 ---
 title: Firmware
 nav_order: 3
-permalink: /vessels/
+permalink: /firmware/
 ---
 
 
