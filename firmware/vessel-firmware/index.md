@@ -1,8 +1,8 @@
 ---
-title: Versions
-parent: vessel-firmware
+title: Vessel Firmware
+parent: Firmware
 nav_order: 1
-permalink: /firmware/versions/
+permalink: /firmware/vessel-firmware/
 ---
 
-# Versions
+# Vessel Firmware
