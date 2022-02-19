@@ -10,7 +10,7 @@ permalink: /team/
 
 # Our Team
 
-### Michael MacDonald - Founder, responsible for guiding team members and plays an active role in all aspects of the project.
+### Michael MacDonald - Founder, Project Manager, Works on all aspects of the project.
 Hi! I am a high school student from Oregon who loves to tinker and code. I am a Clean My Planet global board member and I love to use my STEM skills to find intuitive new ways to help the environment.
 
 ---
